@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Encrypt
+{% endblock %}
+
+
+{% block main %}
+<body>
+    <h4 text-align="center">ENCRYPTION</h4>
+    <div class="wrapper">
+        <div class="modalForm">
+            <div class="actionBtns">
+                <button class="actionBtn autoencrBtnr">Auto-Generate</button>
+                <button class="actionBtn manualencrBtn">Manual</button>
+                <button class="moveBtn">Auto-Generate</button>
+            </div>
+            <div class="userForm">
+                <form action="/encrypt" class="form autoencr autoencrForm" method="post">
+                    <div class="keyGroup">
+                        <h5>Generated Key:</h5><output id="generated_key"  name="generated_key" placeholder="key"></output>
+                    </div>
+                    <div class="textGroup">
+                        <textarea name="text_autogen" placeholder="Enter the text" autocomplete="offf" required></textarea>
+                    </div>
+                    <button type="encrypt" class="cta">Encrypt</button>
+                </form>
+
+                <form action="/encrypt" class="form manualencr" method="post">
+                    <div class="inputGroup">
+                        <input type="text" placeholder="Enter the key" autocomplete="offf">
+                    </div>
+                    <div class="textGroup">
+                        <textarea placeholder="Enter the text" autocomplete="offf"></textarea>
+                    </div>
+                    <button type="encrypt" class="cta">Encrypt</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/static/switch.js"></script>
+</body>
+{% endblock %}

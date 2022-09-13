@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Decrypt
+{% endblock %}
+
+
+{% block main %}
+<body>
+    <h4 text-align="center">DECRYPTION</h4>
+    <div class="wrapper">
+        <div class="modalForm">
+            <div class="userForm">
+                    <div class="inputGroup">
+                        <input type="text" placeholder="Enter the key" autocomplete="offf">
+                    </div>
+                    <div class="textGroup">
+                        <textarea placeholder="Enter the text" autocomplete="offf"></textarea>
+                    </div>
+                    <button type="encrypt" class="cta">Encrypt</button>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock %}

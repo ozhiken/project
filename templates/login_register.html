@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login/Register
+{% endblock %}
+
+{% block main %}
+<body>
+    <div class="wrapper">
+        <div class="modalForm">
+            <div class="actionBtns">
+                <button class="actionBtn registerBtn">Register</button>
+                <button class="actionBtn loginBtn">Login</button>
+                <button class="moveBtn">Register</button>
+            </div>
+            <div class="userForm">
+                <form action="" class="form register registerForm">
+                    <div class="inputGroup">
+                        <input type="text" placeholder="First name" autocomplete="offf">
+                    </div>
+                    <div class="inputGroup">
+                        <input type="text" placeholder="Last name" autocomplete="offf">
+                    </div>
+                    <div class="inputGroup">
+                        <input type="email" placeholder="Email address" autocomplete="offf">
+                    </div>
+                    <div class="inputGroup">
+                        <input type="password" placeholder="Create new password" autocomplete="offf">
+                    </div>
+                    <div class="inputGroup">
+                        <input type="password" placeholder="Confirm password" autocomplete="offf">
+                    </div>
+                    <button type="submit" class="cta">Register</button>
+                </form>
+
+                <form action="" class="form login">
+                    <div class="inputGroup">
+                        <input type="email" placeholder="Email address" autocomplete="offf">
+                    </div>
+                    <div class="inputGroup">
+                        <input type="password" placeholder="Create new password" autocomplete="offf">
+                    </div>
+                    <button type="submit" class="cta">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/static/register.js"></script>
+</body>
+{% endblock %}
